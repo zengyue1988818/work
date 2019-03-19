@@ -3,23 +3,24 @@ package soft1841.day8;
 import javax.lang.model.element.VariableElement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.function.Function;
 
 /**
- * 计算两个Date的差值,获取时间差，刚刚，一分钟前，一小时前
+ * 计算两个Date的差值,获取时间差，刚刚，一分钟前，一小时前，一天前
  * @zengyue
  * 19.03.18
  */
 public class DateDifferentExample {
     public static void main(String[] args) {
         //分别定义起止时间
-        String startTime = "2019-03-17 05:35:30";
+        String startTime = "2019-03-16 05:35:30";
         String stopTime ="2019-03-18 22：59：59";
 //        //通过SimpleDateFormat的对象来把String类型的时间对象转化为Date类型的对象
 //        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        //获取当前时间
+        //获取当前时间
 //        Date date=new Date();
 //        String time = format.format(date);
 //        System.out.println("当前时间是：" + date);
@@ -44,12 +45,18 @@ public class DateDifferentExample {
 //        System.out.println("两个时间相差： " +Math.abs(diffMinutes) + "分");
 //        System.out.println("两个时间相差： " +Math.abs(diffHours) + "小时");
 //        System.out.println("两个时间相差： " +Math.abs(diffDays) + "天");
+        //通过SimpleDateFormat 的对象来把string 类型的时间对象转化为Date类型的对象
         SimpleDateFormat fd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        LocalDate today = LocalDate.now();
+        //在Java 中获取今天的日期
+//        System.out.println("当前时间是:" + today);
+        SimpleDateFormat fd1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println("当前时间是：" +today);
         //此时打印的获取系统当前时间
         Calendar calendar = Calendar.getInstance();
         //当前系统时间
         String now = fd.format(calendar.getTime());
-        System.out.println( now + "  现在时间" );
+        System.out.println( now + "  刚刚" );
         //当前系统的时间的前十秒时间
         calendar.add(Calendar.SECOND,-10);
         String tensecondago = fd.format(calendar.getTime());
@@ -64,3 +71,29 @@ public class DateDifferentExample {
         System.out.println( onedayago +" 一天前" );
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,7 +16,7 @@ public class Date {
     public static void main(String[] args) {
         LocalDate today = LocalDate.now();
         //在Java 8 中获取今天的日期
-        System.out.println("Today's Local dase :" + today);
+        System.out.println("Today's Local date :" + today);
         //在Java 8 中 获取年月日 信息
         int year = today.getYear();
         int month = today.getMonthValue();
