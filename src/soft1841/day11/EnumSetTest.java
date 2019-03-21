@@ -2,13 +2,16 @@ package soft1841.day11;
 /**
  * 中英文对照
  * @zengyue
- * 10.03.21
+ * 19.03.21
  */
 
 import java.util.Scanner;
 
 enum Week {
-    MONDAY("----星期一"), TUESDAY("----星期二"), WEDNESDAY("----星期三"), THURSDAY("----星期四"), FRIDAY("----星期五"), SATURDAY("----星期六"), SUNDAY("----星期天");
+    MONDAY("----星期一"), TUESDAY("----星期二"),
+    WEDNESDAY("----星期三"), THURSDAY("----星期四"),
+    FRIDAY("----星期五"), SATURDAY("----星期六"),
+    SUNDAY("----星期天");
     String week;
 
     Week(String week) {
@@ -43,12 +46,12 @@ enum Week {
 }
 
 
-public class EnumSetTest
-
-{
+public class EnumSetTest{
     public static void main(String[] args) {
+        //访问某个枚举值
         System.out.println("————星期的中英文对照————");
         Week weekArray[] = Week.values();
+        //遍历枚举
         for (Week k : weekArray) {
             System.out.println(k + "    " + k.getName());
         }
