@@ -17,8 +17,13 @@ public class FolderTest {
         File[] fs = file.listFiles();
         //遍历File[]数组
         for (File f:fs){
+            String srcFileName = f.getName();
+            int position = srcFileName.indexOf(".");
+            String suffixName = srcFileName.substring(position);
             //若非目录（即文件），则打印
-            if (!f.isDirectory()) System.out.println(f);
+         if (suffixName.equals(".jpg")||suffixName.equals(".png")){
+             System.out.println(f);
+         }
         }
     }
 }
