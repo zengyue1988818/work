@@ -5,7 +5,12 @@ package soft1841.day16;
  * 19.04.01
  */
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class FolderTest {
     public static void main(String[] args) {
@@ -27,3 +32,4 @@ public class FolderTest {
         }
     }
 }
+

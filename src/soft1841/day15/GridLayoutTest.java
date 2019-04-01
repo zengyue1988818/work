@@ -14,8 +14,10 @@ import java.awt.*;
 public class GridLayoutTest extends JFrame {
     //定义一个面板数组
     private JPanel[] panels;
+
+
     private GridLayoutTest(){
-     init();
+        init();
      setTitle("GridLayout网格布局管理器");
      //界面启动最大化
         setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -44,6 +46,8 @@ public class GridLayoutTest extends JFrame {
         for (int i = 0; i<5;i++){
             panels[0].add(new JButton("科技"));
         }
+
+
         //设置第二个面板为Borderlayout边界布局，设置背景色
         panels[1].setLayout(new BorderLayout(20,20));
         panels[1].setBackground(new Color(0,172,193));
@@ -53,6 +57,9 @@ public class GridLayoutTest extends JFrame {
         panels[1].add(new JButton("东"),BorderLayout.EAST);
         panels[1].add(new JButton("西"),BorderLayout.WEST);
         panels[1].add(new JButton("中"),BorderLayout.CENTER);
+
+
+
         //设置第三个面板为Gridlayout网格布局，设置背景色
         panels[2].setLayout(new GridLayout(3,3,10,10));
         panels[2].setBackground(new Color(77,182,172));
@@ -60,6 +67,9 @@ public class GridLayoutTest extends JFrame {
         for(int i = 0;i<9;i++){
             panels[2].add(new JButton(String.valueOf(i + 1)));
         }
+
+
+
         //设置第四个面板为BordLayout边界布局，设置背景色
         panels[3].setLayout(new BorderLayout(30,30));
         panels[3].setBackground(new Color(140, 153, 250));
@@ -71,6 +81,9 @@ public class GridLayoutTest extends JFrame {
         panels[3].add(new JLabel("南京"),BorderLayout.WEST);
         panels[3].add(new JLabel("        " +
                 "武汉"),BorderLayout.CENTER);
+
+
+
         //设置第五个面板背景色，其布局方式默认为flowlayout居中对齐
         panels[4].setLayout(new FlowLayout(30));
         panels[4].setBackground(new Color(223, 157, 160));
@@ -81,12 +94,20 @@ public class GridLayoutTest extends JFrame {
         panels[4].add(new JTextField("计算机"));
         panels[4].add(new JTextField("科学"));
         panels[4].add(new JTextField("社会"));
+
+
+
+
         //设置第六个面板背景色，其布局方式默认为Gridlayout网格布局
         panels[5].setLayout(new GridLayout(3,3,10,10));
         panels[5].setBackground(new Color(182, 132, 181));
         //依次加入6个密码框
         for (int i = 0; i<6;i++){
             panels[5].add(new JPasswordField(String.valueOf(i + 1)));
+
+
+
+
             //设置第七个面板为BordLayout边界布局，设置背景色
             panels[6].setLayout(new BorderLayout(0,0));
             panels[6].setBackground(new Color(255, 243, 181));
@@ -95,21 +116,26 @@ public class GridLayoutTest extends JFrame {
             panels[6].add(new TextField("美国"),BorderLayout.SOUTH);
             panels[6].add(new JTextField("法国"),BorderLayout.EAST);
             panels[6].add(new JTextField("新西兰"),BorderLayout.WEST);
-            panels[6].add(new JTextField("中国"),BorderLayout.CENTER);
+            panels[6].add(new JTextField("中国"),BorderLayout.CENTER);}
+
+
+
             //设置第八个面板背景色，其布局方式默认为Gridlayout网格布局
             panels[7].setLayout(new GridLayout(3,3,10,10));
             panels[7].setBackground(new Color(182, 139, 155));
           for (int k = 0; k <4;k++){
               panels[7].add(new JRadioButton(String.valueOf(k + 1)));
-              //设置第一个面板背景色，其布局方式默认为flowlayout居中对齐
+          }
+
+
+              //设置第九个面板背景色，其布局方式默认为flowlayout居中对齐
               panels[8].setBackground(new Color(218, 190, 223));
-              for (int s = 0; s<4; s++){
                   panels[8].add(new JComboBox());
               }
-          }
-        }
 
-    }
+
+
+
 
     public static void main(String[] args) {
         //用系统样式替代Swing默认方式，会稍微好看一点
@@ -120,5 +146,4 @@ public class GridLayoutTest extends JFrame {
         }
         new GridLayoutTest();
     }
-
 }
