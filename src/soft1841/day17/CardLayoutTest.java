@@ -10,7 +10,6 @@ import java.util.Random;
 
 /**
  * 卡片布局
- * @zengyue
  * 19.04.02
  */
 public class CardLayoutTest extends JFrame implements ActionListener {

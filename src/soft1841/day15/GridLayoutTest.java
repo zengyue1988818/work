@@ -25,6 +25,7 @@ public class GridLayoutTest extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
     public void init(){
+
         //将整个容器背景颜色设置为白色
         getContentPane().setBackground(new Color(255,255,255));
         //定义三行三列九宫格，放置9个面板
