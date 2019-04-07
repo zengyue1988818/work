@@ -41,6 +41,7 @@ public class GridLayoutTest extends JFrame {
             //面板依次加上网络布局管理器，变成九宫格
             add(panels[i]);
         }
+
         //设置第一个面板背景色，其布局方式默认为flowlayout居中对齐
         panels[0].setBackground(new Color(178,223,219));
         //在第一个面板布局中加入5个按钮
