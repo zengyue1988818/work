@@ -5,9 +5,6 @@ package soft1841.day15;
  * 1.03.27
  */
 
-import com.sun.org.apache.xml.internal.security.Init;
-import javafx.scene.control.ComboBox;
-
 import javax.swing.*;
 import java.awt.*;
 

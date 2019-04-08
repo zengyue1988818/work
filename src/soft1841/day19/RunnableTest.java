@@ -18,9 +18,9 @@ public class RunnableTest extends  Object implements  Runnable{
     }
 
     public static void main(String[] args) {
-        //创建线程对象
-        RunnableTest test = new RunnableTest();
+      //创建线程对象
+        ThreadTest test = new ThreadTest();
         //启动线程
-        test.run();
+        test.start();
     }
 }
