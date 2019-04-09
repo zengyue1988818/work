@@ -1,6 +1,9 @@
 package soft1841.day20;
 
 
+/**
+ * IO网络获取图片
+ */
 
 import java.io.*;
 import java.net.HttpURLConnection;
