@@ -1,4 +1,4 @@
-package soft1841.day28;
+package soft1841.day27;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -14,19 +14,19 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.UUID;
 
-public class JSoupDemo2 {
+public class JSoupDemo3 {
     public static void main(String[] args) throws Exception {
         File file;
         InputStream in;
         OutputStream out;
-        String url ="http://www.tadu.com/";
+        String url ="http://t.icesmall.cn/";
         Connection connection = Jsoup.connect(url);
         Document document = connection.get();
 //        Element elementDiv = document.getElementById("categories-3");
-        Elements elements = document.getElementsByClass("bookImg");
+        Elements elements = document.getElementsByClass("dirShow2");
         System.out.println(elements.size());
         for (Element e:elements) {
-            Element imgElement = e.child(0);
+            Element imgElement = e.child(0).child(0).child(0).child(0);
             UUID uuid = UUID.randomUUID();
             String imgName = uuid + ".jpg";
             file = new File("G:\\dawnload\\" +imgName);
