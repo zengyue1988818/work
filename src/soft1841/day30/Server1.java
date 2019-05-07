@@ -25,9 +25,10 @@ public class Server1 {
         }
     }
 }
+//建立线程
 class ServerThread1 implements  Runnable{
     private Socket socket;
-
+    //两种方法传值： setter 和 构造方法
     public  ServerThread1(Socket socket) {
         this.socket = socket;
     }

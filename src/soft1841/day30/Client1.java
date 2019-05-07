@@ -13,6 +13,7 @@ import java.util.Scanner;
  */
 public class Client1 {
     public static void main(String[] args) throws IOException {
+        //127.0.0.1== local host
         Socket client = new Socket("localhost",8081);
         System.out.println("成功连上服务器");
         Scanner scanner = new Scanner(System.in);
@@ -22,6 +23,8 @@ public class Client1 {
         buf = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
         buf.write(str);
         buf.flush();
+
+
         buf.close();
     }
 }
